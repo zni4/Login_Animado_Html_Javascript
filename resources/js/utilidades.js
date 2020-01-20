@@ -12,6 +12,10 @@ function MostrarMensaje(_tipoMensaje, textoMensaje) {
         var cabeceraMensaje = "Information";
         var imagen = "imagen_info";
     }
+    else if (_tipoMensaje === "Question") {
+        var cabeceraMensaje = "Question";
+        var imagen = "imagen_question";
+    }
 
     var divModal = document.getElementById('Mensaje');
 
@@ -33,6 +37,17 @@ function MostrarMensaje(_tipoMensaje, textoMensaje) {
     divBody.appendChild(divNodo);
     divModal = divNodo;
 
+    if (_tipoMensaje === "Question") {
+        divModal.innerHTML +=
+            '<div class="MensajeAviso"><div class="cabecera"><button onclick="OcultarMensaje();">X</button><h4>' +
+            cabeceraMensaje +
+            '</h4></div><div class="body"><span class="' +
+            imagen
+            + '"></span><p>' +
+            textoMensaje +
+            '</p></div><div class="footer"><button onclick="Responder(' + '1' + ');">Si</button><button onclick="Responder(' + '0' + ');">No</button></div></div>';
+    }
+    else {
     divModal.innerHTML +=
         '<div class="MensajeAviso"><div class="cabecera"><button onclick="OcultarMensaje();">X</button><h4>' +
         cabeceraMensaje +
@@ -40,7 +55,8 @@ function MostrarMensaje(_tipoMensaje, textoMensaje) {
         imagen
         + '"></span><p>' +
         textoMensaje +
-        '</p></div><div class="footer"><button onclick="OcultarMensaje();" type="button">Aceptar</button></div></div>';
+            '</p></div><div class="footer"><button onclick="OcultarMensaje();" type="button">Aceptar</button></div></div>';
+    }
 }
 
 function OcultarMensaje() {
@@ -51,4 +67,9 @@ function OcultarMensaje() {
     if (divModal != null) {
         mensaje.parentNode.removeChild(mensaje); // Elimina el mensaje
     }
+}
+
+function Responder(respuesta) {
+    alert(respuesta);
+    OcultarMensaje();
 }

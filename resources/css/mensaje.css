@@ -66,6 +66,13 @@
             background-image: url('/./../resources/images/info.png');
         }
 
+        .MensajeAviso .body .imagen_question {
+            float: left;
+            width: 72px;
+            height: 72px;
+            background-image: url('/./../resources/images/question.png');
+        }
+
     .MensajeAviso .footer {
         text-align: right;
     }
