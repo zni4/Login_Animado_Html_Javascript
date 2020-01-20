@@ -1,9 +1,5 @@
 function MostrarMensaje(_tipoMensaje, textoMensaje) {
-    //if (textoMensaje === undefined || textoMensaje === '') {
-    //    MostrarMensaje('Debe introducir un texto para el mensaje');
-    //    return;
-    //}
-
+    
     if (_tipoMensaje === "Warning") {
         var cabeceraMensaje = "Warning";
         var imagen = "imagen_aviso";

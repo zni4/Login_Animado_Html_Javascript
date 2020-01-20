@@ -4,10 +4,10 @@ function acceder() {
             window.location.href = "./aplicacion.html";
         }
         else {
-            MostrarMensaje("Warning","Incorrect Password");
+            MostrarMensaje("Error","Incorrect Password");
         }
     }
      else {
-        MostrarMensaje("Warning","Incorrect Username");
+        MostrarMensaje("Error","Incorrect Username");
      }
 }
