@@ -55,11 +55,4 @@ function OcultarMensaje() {
     if (divModal != null) {
         mensaje.parentNode.removeChild(mensaje); // Elimina el mensaje
     }
-
-    BorrarTextoMensaje();
-}
-
-function BorrarTextoMensaje() {
-    document.getElementById('TextoMensaje').value = '';
-    document.getElementById('TextoMensaje').focus();
 }
