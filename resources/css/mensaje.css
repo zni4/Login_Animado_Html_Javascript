@@ -82,15 +82,16 @@
             font-weight: normal;
             text-align: center;
             border-radius: 4px;
-            border: 1px solid #e5e5e5;
-            background-color: #428bca;
-            color: #ffffff;
+            border: 2px solid #428bca;
+            background-color: none;
+            color: black;
             margin: 6px;
             cursor: pointer;
         }
 
             .MensajeAviso .footer button:hover {
-                background-color: #3276b1;
+                background-color: #428bca;
+                color: white;
             }
 
 .contenedor_mensaje {

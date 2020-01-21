@@ -65,4 +65,5 @@ input[type = "button"] {
 }
     input[type = "button"]:hover {
         background: #ff9549;
+        color: black;
     }
