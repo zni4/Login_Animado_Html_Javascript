@@ -1,4 +1,8 @@
 function MostrarMensaje(_tipoMensaje, textoMensaje) {
+    /* Lo suyo es recibir además un callback para cada una de las posibles respuestas,
+     * a ese callback es al que se llamará cuando se pulse cada botón.
+     * Esas funciones son las que ejecutarán la acción correspondiente.
+     * En este caso uso una única función para la respuesta */
     
     if (_tipoMensaje === "Warning") {
         var cabeceraMensaje = "Warning";
@@ -70,6 +74,19 @@ function OcultarMensaje() {
 }
 
 function Responder(respuesta) {
-    alert(respuesta);
+    if (respuesta === 1) {
+        document.getElementById('respuestaSi').classList.add('respuestaSi');
+        document.getElementById('respuestaNo').classList.remove('respuestaNo');
+    }
+    else {
+        document.getElementById('respuestaNo').classList.add('respuestaNo');
+        document.getElementById('respuestaSi').classList.remove('respuestaSi');
+    }
+    
     OcultarMensaje();
+}
+
+function resetearRespuesta() {
+    document.getElementById('respuestaNo').classList.remove('respuestaNo');
+    document.getElementById('respuestaSi').classList.remove('respuestaSi');
 }

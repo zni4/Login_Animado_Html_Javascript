@@ -18,7 +18,13 @@
 <body>
     <form action="aplicacion.html" method="post">
         <h1>Aplicación</h1>
-        <div style="color: white; cursor: pointer;" onclick="MostrarMensaje('Question', '¿Pregunta?');">PREGUNTA (click para mostrarla)</div>
+        <div class="pregunta" onclick="MostrarMensaje('Question', '¿Pregunta?');">PREGUNTA (click para mostrarla)</div>
+        <div class="respuesta">
+            <div id="respuestaSi" class="Si">SI</div>
+            <div style="width:100px;"></div>
+            <div id="respuestaNo" class="No">NO</div>
+        </div>
+        <input type="button" class="animate" name="" value="Reset" onclick="resetearRespuesta();">
     </form>
 </body>
 </html>
