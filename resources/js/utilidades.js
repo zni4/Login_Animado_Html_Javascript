@@ -43,7 +43,7 @@ function MostrarMensaje(_tipoMensaje, textoMensaje) {
 
     if (_tipoMensaje === "Question") {
         divModal.innerHTML +=
-            '<div class="MensajeAviso"><div class="cabecera"><button onclick="OcultarMensaje();">X</button><h4>' +
+            '<div class="MensajeAviso"><div class="cabecera"><button onclick="OcultarMensaje();">&times;</button><h4>' +
             cabeceraMensaje +
             '</h4></div><div class="body"><span class="' +
             imagen
@@ -53,7 +53,7 @@ function MostrarMensaje(_tipoMensaje, textoMensaje) {
     }
     else {
     divModal.innerHTML +=
-        '<div class="MensajeAviso"><div class="cabecera"><button onclick="OcultarMensaje();">X</button><h4>' +
+        '<div class="MensajeAviso"><div class="cabecera"><button onclick="OcultarMensaje();">&times;</button><h4>' +
         cabeceraMensaje +
         '</h4></div><div class="body"><span class="' + 
         imagen
